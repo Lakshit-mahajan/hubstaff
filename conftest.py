@@ -23,7 +23,6 @@ def browser_fixture(request):
     global driver
     browser = request.config.getoption("browser")
     if browser == "firefox":
-        service = Service("C:/Users/ASUS/Downloads/geckodriver-v0.37.1-win64/geckodriver.exe")
         options = FirefoxOptions()
         options.add_argument("--start-maximized")
         driver = webdriver.Firefox(options=options)
