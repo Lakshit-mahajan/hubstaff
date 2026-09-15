@@ -24,6 +24,7 @@ def browser_fixture(request):
     browser = request.config.getoption("browser")
     if browser == "firefox":
         options = FirefoxOptions()
+        options.add_argument("--headless")
         options.add_argument("--start-maximized")
         driver = webdriver.Firefox(options=options)
         driver.implicitly_wait(4)
