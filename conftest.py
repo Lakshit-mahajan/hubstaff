@@ -26,7 +26,7 @@ def browser_fixture(request):
         service = Service("C:/Users/ASUS/Downloads/geckodriver-v0.37.1-win64/geckodriver.exe")
         options = FirefoxOptions()
         options.add_argument("--start-maximized")
-        driver = webdriver.Firefox(service=service, options=options)
+        driver = webdriver.Firefox()
         driver.implicitly_wait(4)
 
     elif browser == "edge":
